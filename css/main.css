@@ -53,3 +53,11 @@ section p {
     cursor: pointer;
   }
 } /*# sourceMappingURL=main.css.map */
+
+
+/*explode*/
+
+#explode-view {
+  max-width: 100%;
+  /* width: 100vw; */
+}/*#
