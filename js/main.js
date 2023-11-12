@@ -57,8 +57,6 @@
 })();
 
 
-
-
 // Handles loading the events for <model-viewer>'s slotted progress bar
 const onProgress = (event) => {
   const progressBar = event.target.querySelector(".progress-bar");
@@ -123,6 +121,12 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
     hotspot.addEventListener("mouseout", hideInfo);
   });
 })();
+
+// In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
+
+
+
+
 
 // In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
 //scroll-driven
