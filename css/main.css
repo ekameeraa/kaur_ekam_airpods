@@ -3,13 +3,86 @@ body {
   font-size: 18px;
 }
 
+/*logo*/
+#main-logo {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 40px;
+  margin-top: 9px;
+}
+
+/* hamburger */
+
+#main-nav button {
+  width: 20px;
+  height: 20px;
+  background: url(../images/burger.svg) no-repeat center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  transition: all .5s ease;
+  border: 0;
+}
+
+#main-nav button.expanded {
+  transform: rotate(90deg);
+}
+
+#burger-con {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#burger-con.slide-toggle {
+  display: block;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  color: #000;
+}
+
+#main-nav ul li :hover {
+  color: black;
+}
+
+#main-nav ul li {
+  border-bottom:1px solid #000;
+}
+
+#main-nav ul li:first-child {
+  border-top: 1px solid #efefef;
+}
+
+#main-nav ul li:last-child {
+  margin-bottom: 10px;
+}
+
+
+/*body*/
 h2,
 p {
   margin-bottom: 30px;
 }
 
+#para h3{
+  text-align: center;
+
+}
+
 section p {
-  font-size: 36px;
+  font-size: 25px;
+  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 #outerShell {
@@ -61,3 +134,98 @@ section p {
   max-width: 100%;
   /* width: 100vw; */
 }/*#
+
+
+/* footer */
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* front & back */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+/* back card-side */
+.flip-card-back {
+  background-color: #04AA6D;
+  color: white;
+  transform: rotateY(180deg);
+}
