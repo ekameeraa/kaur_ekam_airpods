@@ -133,14 +133,24 @@ section p {
 #explode-view {
   max-width: 100%;
   /* width: 100vw; */
-}/*#
+}
 
+#bttn{margin-top: 40px;
+  color: #45a049;
+  font-weight: bold;
+width: 100px;
+height: 40px;}
 
 /* footer */
 * {
   box-sizing: border-box;
 }
 
+#bottom {
+  margin-top: 100px;
+}
+#bottom h2 {color: red;}
+#bottom p {color: green; font-weight: bold;}
 /* Style inputs */
 input[type=text], select, textarea {
   width: 100%;
@@ -220,12 +230,13 @@ input[type=submit]:hover {
 }
 
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  background-color: #ccc;
+  color: darkgoldenrod;
+  font-weight: bold;
 }
 /* back card-side */
 .flip-card-back {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #ccc;
+  color: darkgoldenrod;
   transform: rotateY(180deg);
 }
