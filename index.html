@@ -6,6 +6,7 @@
     <title>Earbuds-2</title>
     <link href="css/grid.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link type="text/css" href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <h1 class="hidden">Product Page</h1>
@@ -134,7 +135,115 @@
               <h1>AIRPODS PRO</h1>
               <img src="images/b.jpg" alt="b">
             </div>
+       
+        <section class="col-span-full">
+          <h2 class="hidden">X-ray earbuds viewer</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolorem placeat vitae omnis dignissimos enim nulla ad excepturi, minus repudiandae veniam eius at tempore optio, praesentium perferendis iste laborum. Porro!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nam quaerat facilis quo aliquam neque explicabo, dolor earum, fugiat, iure vitae modi? Reiciendis numquam officiis itaque ea, magni aliquid porro?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa dolorem placeat vitae omnis dignissimos enim nulla ad excepturi, minus repudiandae veniam eius at tempore optio, praesentium perferendis iste laborum. Porro!</p>
+        </section>
+
+        <!-- <model-viewer> HTML element -->
+        <section class="grid-con" id="hotspots">
+          <h2 class="col-span-full">hotspots</h2> 
+          <div class=" col-span-full">
+          <model-viewer
+            src="model/model-airpods.gltf"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            camera-controls
+            poster="poster.webp"
+            shadow-intensity="2"
+            exposure="0.55"
+            shadow-softness="0.92"
+          >
+            <button
+              class="Hotspot"
+              slot="hotspot-1"
+              data-position="3.9788445861717534m 10.22333923003384m -14.444690660084145m"
+              data-normal="0.291879779096408m 0.05332664371305223m -0.9549672578810927m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-1">
+                <p>1. Active Noise Cancellation</p>
+                <p>
+                  This feature will reduced external noise by creating a mirror image
+                  sound wave
+                </p>
+                <img src="img/1.png" alt="hotspot-1">
+              </div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-2"
+              data-position="4.746929443880414m -3.070426730678008m -14.15105520679252m"
+              data-normal="0.29811142634206556m 0.004536011058403078m -0.9545202994635459m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-2">
+                <p>2. Bluetooth Connect</p>
+                <p>Bluetooth Technology to wirelessly connect to the source</p>
+                <img src="img/2.jpg" alt="hotspot-2">
+              </div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-3"
+              data-position="2.3259368312669535m -9.960498115605287m 17.548011608533407m"
+              data-normal="0.009863995593609226m -0.9308256301463846m -0.3653304639001725m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-3">
+                <p>3. Charging</p>
+                <p>Available with a charging case 1.5 Ampere</p>
+                <img src="img/3.png" alt="hotspot-3">
+              </div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-4"
+              data-position="6.186096056160835m 11.190778789718136m 6.181611472166145m"
+              data-normal="0.7356942902579983m 0.09468664217680604m -0.670662620901942m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-4">
+                <p>4. Call Quality</p>
+                <img src="img/4.jpg" alt="hotspot-4">
+                <p>
+                  Very high-quality earbuds compensate for this with top-notch signal
+                  processing, audio drivers, and amplifiers.
+                </p>
+      
+              </div></button
+            ><button
+              class="Hotspot"
+              slot="hotspot-5"
+              data-position="1.135920636001888m 3.644922745839992m 21.115136863143622m"
+              data-normal="-0.3193685556322966m -0.0420937095564607m 0.9466952230201212m"
+              data-visibility-attribute="visible"
+            >
+              <div class="HotspotAnnotation" id="hotspot-5">
+                <p>5.Touch</p>
+                <img src="img/5.jpg" alt="hotspot-5">
+                <p>Capacitive touch surfaces on each bud’s back</p>
+              </div>
+            </button>
+            <div class="progress-bar hide" slot="progress-bar">
+              <div class="update-bar"></div>
+            </div>
+            <button slot="ar-button" id="ar-button">View in your space</button>
+            <div id="ar-prompt">
+              <img src="img/ar_hand_prompt.png" alt="ar-prompt">
+            </div>
+          </model-viewer>
           </div>
+      </section>
+    
+      <script src="js/script.js"></script>
+      <!-- Loads <model-viewer> for browsers: -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+      <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"
+      ></script>
+
         </div>
       </div>
       <div class="column">
@@ -156,7 +265,6 @@
       </div>
     </div>
   </div>
-
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
