@@ -20,7 +20,6 @@ body {
 #main-logo:hover {transition: all .5s ease;transform: rotate(90deg);background-color: lightgreen;}
 
 /* hamburger */
-
 #main-nav button {
   width: 20px;
   height: 20px;
@@ -30,7 +29,7 @@ body {
   transition: all .5s ease;
   border: 0;
 }
-#main-nav button:hover {background-color: red;}
+
 #main-nav button.expanded {
   transform: rotate(90deg);
 }
@@ -55,15 +54,15 @@ body {
   display: block;
   padding: 10px 0 10px 0;
   text-align: center;
-  color: #000;
+  color: gray;
 }
 
 #main-nav ul li :hover {
-  color: black;
+  color: red;
 }
 
 #main-nav ul li {
-  border-bottom:1px solid #000;
+  border-bottom:1px solid #efefef;
 }
 
 #main-nav ul li:first-child {
