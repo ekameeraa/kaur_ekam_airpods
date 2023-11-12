@@ -20,7 +20,6 @@ body {
 #main-logo:hover {transition: all .5s ease;transform: rotate(90deg);background-color: lightgreen;}
 
 /* hamburger */
-
 #main-nav button {
   width: 20px;
   height: 20px;
