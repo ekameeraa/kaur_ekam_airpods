@@ -58,13 +58,13 @@
 
 
 
-
+//scroll-driven
 (() => {
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;
-  const frameCount = 60; //how many still frames do we have?
+  const frameCount = 20; //how many still frames do we have?
   const images = []; //an array to hold all of our images
   //create an object literal with a property frame to hold the current frame
   const buds = {
@@ -84,7 +84,7 @@
   //Not actually aniamting a DOM element, but rather an object
   //which contains a frame count
   gsap.to(buds, {
-      frame: 60,
+      frame: 20,
       snap: "frame",
       scrollTrigger: {
           trigger: "#explode-view",
