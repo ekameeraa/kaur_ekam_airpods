@@ -174,7 +174,7 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
       //const img = new Image();
       const img = document.createElement("img");
       //need to recreate a string: images/explode_0001.webp
-      img.src = `images/explode_${(i+1).toString().padStart(4, '0')}.jpg`;
+      img.src = `images/images_${(i+1).toString().padStart(4, '0')}.jpg`;
       images.push(img);
   }
   //console.table(images)
