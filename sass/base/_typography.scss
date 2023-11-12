@@ -1,5 +1,19 @@
+@use "../abstracts/variables" as v;
+
 p {
-  color: #ff0909;
+  color: v.$primary-color;
   font-size: 38px;
   line-height: 44px;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: $accent-color;
+}
+
+section p {
+  font-size: 30px;
+  color: $secondary-color;
 }
