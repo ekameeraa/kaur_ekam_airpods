@@ -2,8 +2,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
-video {margin-left: 450px; margin-bottom: 40px;}
+#video {margin-bottom: 100px; margin: auto ;max-width: 100%;
+  height: auto;}
 
+#more-information {
+  margin-top: 70px;
+  font-weight: bold;
+  color: red;
+}
 /*logo*/
 #main-logo {
   width: 45px;
