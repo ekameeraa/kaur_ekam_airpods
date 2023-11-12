@@ -26,7 +26,6 @@
 // Info about IIFE https://flaviocopes.com/javascript-iife/
 
 
-
 (() => {
   (function () {
     "use strict";
@@ -85,14 +84,85 @@
 })();
 
 
+// Handles loading the events for <model-viewer>'s slotted progress bar
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector(".progress-bar");
+  const updatingBar = event.target.querySelector(".update-bar");
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add("hide");
+    event.target.removeEventListener("progress", onProgress);
+  } else {
+    progressBar.classList.remove("hide");
+  }
+};
+document.querySelector("model-viewer").addEventListener("progress", onProgress);
+{
+  const progressBar = event.target.querySelector(".progress-bar");
+  const updatingBar = event.target.querySelector(".update-bar");
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add("hide");
+    event.target.removeEventListener("progress", onProgress);
+  } else {
+    progressBar.classList.remove("hide");
+  }
+}
+document.querySelector("model-viewer").addEventListener("progress", onProgress);
+
+// rough
+(() => {
+  //console.log("IIFE Fired");
+  //variables
+  const model = document.querySelector("#model");
+  const hotspots = document.querySelectorAll(".Hotspot");
+
+  //functions
+  function modelLoaded() {
+    //console.log(hotspots);
+    hotspots.forEach((hotspot) => {
+      hotspot.style.display = "block";
+    });
+  }
+
+  function showInfo() {
+    //console.log(this.slot);
+    //console.log(`#${this.slot}`);
+    //since the slot value matches the id value I can use the slot value as a selector to get to the div I want.
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, 1, { autoAlpha: 1 });
+  }
+
+  function hideInfo() {
+    // console.log(this.slot);
+    // console.log(`#${this.slot}`);
+    let selected = document.querySelector(`#${this.slot}`);
+    gsap.to(selected, 1, { autoAlpha: 0 });
+  }
+
+  //Event Listener
+  model.addEventListener("load", modelLoaded);
+
+  hotspots.forEach(function (hotspot) {
+    hotspot.addEventListener("mouseover", showInfo);
+    hotspot.addEventListener("mouseout", hideInfo);
+  });
+})();
+
+// In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
 
 
+
+
+
+// In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
+//scroll-driven
 (() => {
   const canvas = document.querySelector("#explode-view");
   const context = canvas.getContext("2d");
   canvas.width = 1920;
   canvas.height = 1080;
-  const frameCount = 60; //how many still frames do we have?
+  const frameCount = 20; //how many still frames do we have?
   const images = []; //an array to hold all of our images
   //create an object literal with a property frame to hold the current frame
   const buds = {
@@ -112,7 +182,7 @@
   //Not actually aniamting a DOM element, but rather an object
   //which contains a frame count
   gsap.to(buds, {
-      frame: 60,
+      frame: 20,
       snap: "frame",
       scrollTrigger: {
           trigger: "#explode-view",
@@ -137,31 +207,3 @@
 
 
 
-
-// hamburger menu
-(function(){
-	"use strict";
-	
-	console.log("fired");
-
-	let button = document.querySelector("#button");
-	let burgerCon = document.querySelector("#burger-con");
-
-	function hamburgerMenu() {
-		burgerCon.classList.toggle("slide-toggle");
-		button.classList.toggle("expanded");
-	};
-
-	// let hamburgerMenu = () => {
-	// 	burgerCon.classList.toggle("slide-toggle");
-	// 	button.classList.toggle("expanded");
-	// };
-
-	button.addEventListener("click", hamburgerMenu, false);
-		
-})();
-
-//Can also be written like this:
-//(() => {  })();   
-
-// Info about IIFE https://flaviocopes.com/javascript-iife/
