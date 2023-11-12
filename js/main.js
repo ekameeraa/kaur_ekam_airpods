@@ -125,7 +125,6 @@ document.querySelector("model-viewer").addEventListener("progress", onProgress);
 })();
 
 // In this version, the event listeners use regular functions instead of arrow functions, so the "this" keyword inside the event listeners will refer to the DOM element that triggered the event.
-=======
 //scroll-driven
 (() => {
   const canvas = document.querySelector("#explode-view");
