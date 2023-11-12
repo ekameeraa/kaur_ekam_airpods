@@ -2,6 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
+video {margin-left: 450px; margin-bottom: 40px;}
 
 /*logo*/
 #main-logo {
