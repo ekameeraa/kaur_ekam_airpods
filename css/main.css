@@ -75,7 +75,7 @@ body {
 }  
 
 /*body*/
-h1 {text-align: center; color: red; margin-bottom: 30px;}
+h1 {text-align: center; color: red; margin-bottom: 30px;margin-top: 40px;}
 h1:hover {transition: ease-in 1s; color: #04AA6D; font-size: 25px;}
 h2,
 p {
@@ -139,6 +139,7 @@ section p {
 
 #explode-view {
   max-width: 100%;
+  margin-left: 240px;
   /* width: 100vw; */
 }/*# sourceMappingURL=main.css.map */
 

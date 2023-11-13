@@ -106,7 +106,7 @@
       //const img = new Image();
       const img = document.createElement("img");
       //need to recreate a string: images/explode_0001.webp
-      img.src = `images/images_${(i+1).toString().padStart(4, '0')}.jpg`;
+      img.src = `images/images_${(i+1).toString().padStart(5, '0')}.jpg`;
       images.push(img);
   }
   //console.table(images)
@@ -114,14 +114,15 @@
   //Not actually aniamting a DOM element, but rather an object
   //which contains a frame count
   gsap.to(buds, {
-      frame: 52,
+      frame: 51,
       snap: "frame",
       scrollTrigger: {
           trigger: "#explode-view",
           pin: true,
           scrub: 1,
           start: "top top",
-          markers: true
+          end: "+=6000",
+          markers: false
       },
       onUpdate: render
   })
